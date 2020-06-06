@@ -201,8 +201,13 @@ rgba(47, 48, 58, 0.8)),
   color: var(--hero-text-color);
   background-color: var(--accent-color);
   line-height: 1.9;
-  
   letter-spacing: 0.06em;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button:focus,
+.button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Утилита отступ в секциях */
@@ -463,13 +468,15 @@ width:calc((100% - 90px) / 4);
 }
 .box-appeal .link {
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-appeal .link:focus,
 .box-appeal .link:hover {
   background-color: var(--accent-color);
 }
-.box-appeal .link-icon{
-  --color4: var(--primary-footer-text-color);
+.box-appeal-icon{
+  fill: var(--footer-logo-color);
 }
 .copyright {
   padding-top: 18px;
@@ -497,6 +504,9 @@ width:calc((100% - 90px) / 4);
   text-align: center;
   color: var(--title-text-color);
   background-color: #F5F4FA;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  .list-button{
   display: flex;
@@ -554,6 +564,7 @@ position: absolute;
 top: 0;
 left: 0;
 width: 100%;
+height: 100%;
 background-color: rgba(33, 150, 243, 0.9);
 
 transform: translateY(100%);
