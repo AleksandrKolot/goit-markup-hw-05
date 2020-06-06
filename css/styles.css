@@ -140,13 +140,13 @@ h1, h2, h3, h4, h5, h6{
 .phone:hover, .phone:focus  { 
   color: var(--accent-color);
  }
- .mail:hover .link-icon,
- .mail:focus .link-icon,
- .phone:hover .link-icon,
- .phone:focus .link-icon {
+ .mail:hover .contacts-icon,
+ .mail:focus .contacts-icon,
+ .phone:hover .contacts-icon,
+ .phone:focus .contacts-icon {
   fill: #2196F3;
  }
-.link-icon {
+ .contacts-icon {
   margin-right: 10px;
   fill: #757575;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
@@ -359,11 +359,21 @@ width:calc((100% - 90px) / 4);
   padding: 0;
   border: none;
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .public .link:focus,
 .public .link:hover {
   background-color: var(--accent-color);
-  --color4: var(--team-bg-color);
+}
+.public-icon {
+  fill: #AFB1B8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.public .link:focus .public-icon,
+.public .link:hover .public-icon {
+  fill: var(--team-bg-color)
 }
 
 /* секция постоянные клиенты */
@@ -377,7 +387,7 @@ width:calc((100% - 90px) / 4);
 .list-clients .item:not(:last-child) {
  margin-right: 30px;
 }
-.list-clients .box-icon {
+.list-clients .link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,11 +396,21 @@ width:calc((100% - 90px) / 4);
   height: 90px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-clients .box-icon:focus,
-.list-clients .box-icon:hover{
-  --color4: var(--accent-color);
+.list-clients .link:focus,
+.list-clients .link:hover {
   border-color: var(--accent-color);
+}
+.clients-icon {
+  fill: #AFB1B8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-clients .link:focus .clients-icon,
+.list-clients .link:hover .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* footer */
